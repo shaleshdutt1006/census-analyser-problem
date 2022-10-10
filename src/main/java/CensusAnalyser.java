@@ -7,7 +7,7 @@ public class CensusAnalyser {
         int numberOfEntries = 0;
         try {
             /*
-            Reading states census file using BufferedReader class it is used to read the text from a
+            Reading states census file using BufferedReader class it used to read the text from a
             character-based input stream.We can read the data line by line from this.
              */
             BufferedReader reader = new BufferedReader(new FileReader(csvFilePath));
