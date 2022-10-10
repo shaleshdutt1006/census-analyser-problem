@@ -1,10 +1,10 @@
 public class CensusAnalyserException extends Exception {
 
     enum exceptionType{
-        Census_File_Problem
+        Unable_To_Parse, Census_File_Problem
     }
     exceptionType type;
-    public CensusAnalyserException(String message, exceptionType census_File_Problem) {
+    public CensusAnalyserException(String message, exceptionType type) {
         super(message);
         this.type=type;
     }

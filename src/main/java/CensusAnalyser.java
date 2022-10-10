@@ -18,10 +18,12 @@ public class CensusAnalyser {
                 numberOfEntries++;
 
             }
-
         } catch (IOException e) {
             throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.exceptionType.Census_File_Problem);
 
+        }
+        catch (IllegalStateException e){
+            throw new CensusAnalyserException(e.getMessage(), CensusAnalyserException.exceptionType.Unable_To_Parse);
         }
         return numberOfEntries;
     }
